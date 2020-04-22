@@ -39,6 +39,7 @@
 \setbeamerfont{title page title}{size=\LARGE,series=\bfseries}
 \setbeamerfont{title page author}{size=\footnotesize}
 \setbeamerfont{title page institute}{size=\scriptsize}
+\setbeamerfont{section page}{size=\LARGE,series=\bfseries}
 \setbeamerfont{frametitle}{family=\Raleway,size=\large,series=\bfseries}
 \setbeamerfont{caption}{size=\footnotesize}
 
@@ -60,7 +61,7 @@
 \xpatchcmd{\itemize}
   {\def\makelabel}
   {\ifnum\@itemdepth=1\relax
-     \setlength\itemsep{3ex}% separation for first level
+     \setlength\itemsep{1ex}% separation for first level
    \else
      \ifnum\@itemdepth=2\relax
        \setlength\itemsep{0.5ex}% separation for second level
@@ -90,6 +91,7 @@
 % Components
 % ====================
 
+
 % Title page
 \setbeamertemplate{title page}
 {
@@ -102,6 +104,19 @@
     \end{centering}
 }
 
+% Section page
+\setbeamertemplate{section page}
+{
+    \begin{centering}
+        \vspace*{\fill}
+        {\usebeamerfont{title page title}\usebeamercolor[fg]{title page}\insertsection\\[1.5ex]}
+        \vspace*{\fill}
+    \end{centering}
+}
+
+\AtBeginSection[]{
+  \sectionpage
+  }
 % Footer
 \setbeamertemplate{footline}{
     \hfill%
