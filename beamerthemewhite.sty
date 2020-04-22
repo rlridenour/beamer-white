@@ -36,11 +36,12 @@
 
 \usepackage{raleway}
 % \usepackage{lato}
-\setbeamerfont{title page title}{size=\LARGE,series=\bfseries}
-\setbeamerfont{title page author}{size=\footnotesize}
-\setbeamerfont{title page institute}{size=\scriptsize}
-\setbeamerfont{section page}{size=\LARGE,series=\bfseries}
-\setbeamerfont{frametitle}{family=\Raleway,size=\large,series=\bfseries}
+\setbeamerfont{title page title}{size=\huge,series=\bfseries}
+\setbeamerfont{title page author}{size=\small}
+\setbeamerfont{title page institute}{size=\footnotesize}
+\setbeamerfont{section page}{size=\Large,series=\bfseries}
+
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
 \setbeamerfont{caption}{size=\footnotesize}
 
 % ====================
@@ -73,6 +74,12 @@
  {}
  {}
 
+
+% Enumerate
+
+\setbeamertemplate{enumerate subitem}{\alph{enumii}.}
+% \setbeamertemplate{enumerate subsubitem}[]
+\setbeamertemplate{enumerate subsubitem}{\insertenumlabel)}
 % Equation
 \setlength\belowdisplayshortskip{2ex}
 
@@ -93,16 +100,16 @@
 
 
 % Title page
-\setbeamertemplate{title page}
-{
-    \begin{centering}
-        \vskip5ex plus 1filll
-        {\usebeamerfont{title page title}\usebeamercolor[fg]{title page}\inserttitle\\[1.5ex]}
-        {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}\insertauthor\\[2ex]}
-        {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertinstitute\\[1ex]}
-        \vskip0pt plus 1filll
-    \end{centering}
-}
+ \setbeamertemplate{title page}
+ {
+     \begin{centering}
+         \vskip5ex plus 1filll
+         {\usebeamerfont{title page title}\usebeamercolor[fg]{title page}\inserttitle\par\vspace{1.5ex}}
+         {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}\insertauthor\par\vspace{2ex}}
+         {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertinstitute\par\vspace{1ex}}
+         \vskip0pt plus 1filll
+     \end{centering}
+ }
 
 % Section page
 \setbeamertemplate{section page}
