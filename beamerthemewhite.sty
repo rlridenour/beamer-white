@@ -34,15 +34,18 @@
 
 % \setbeamerfont{title page}{family=\Raleway}
 
-\usepackage{raleway}
-% \usepackage{lato}
-\setbeamerfont{title page title}{size=\huge,series=\bfseries}
+
+\usepackage{cabin} 
+
+\setbeamerfont{title page title}{size=\LARGE,series=\bfseries}
+\setbeamerfont{title page subtitle}{size=\large,series=\bfseries}
 \setbeamerfont{title page author}{size=\small}
 \setbeamerfont{title page institute}{size=\footnotesize}
-\setbeamerfont{section page}{size=\Large,series=\bfseries}
+\setbeamerfont{section page}{size=\large,series=\bfseries}
 
 \setbeamerfont{frametitle}{size=\large,series=\bfseries}
 \setbeamerfont{caption}{size=\footnotesize}
+
 
 % ====================
 % Macros
@@ -102,13 +105,14 @@
 % Title page
  \setbeamertemplate{title page}
  {
-     \begin{centering}
+%     \begin{centering}
          \vskip5ex plus 1filll
-         {\usebeamerfont{title page title}\usebeamercolor[fg]{title page}\inserttitle\par\vspace{1.5ex}}
-         {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}\insertauthor\par\vspace{2ex}}
+         {\usebeamerfont{title page title}\usebeamercolor[fg]{title page}\inserttitle\par\vspace{0.5ex}}
+         {\usebeamerfont{title page subtitle}\usebeamercolor[fg]{title page}\insertsubtitle\par\vspace{1.5ex}}
+         {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}\insertauthor\par\vspace{1.5ex}}
          {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertinstitute\par\vspace{1ex}}
          \vskip0pt plus 1filll
-     \end{centering}
+ %    \end{centering}
  }
 
 % Section page
